@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-transparent rounded-xl;
+  }
+
+  main {
+    @apply bg-white/50 hover:bg-white/80 dark:bg-black/50 dark:hover:bg-black/80 dark:text-white/50 text-black rounded-xl font-mono text-2xl font-medium;
+  }
+}
