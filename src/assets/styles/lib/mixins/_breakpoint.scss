@@ -1,0 +1,11 @@
+@mixin breakpoint($value, $property: min-width, $context: screen) {
+  @media #{$context} and (#{$property}: #{$value}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($min, $max, $context: screen) {
+  @media #{$context} and (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}

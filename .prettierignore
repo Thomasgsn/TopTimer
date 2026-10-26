@@ -1,0 +1,6 @@
+# Ignore artifacts:
+node_modules/**
+dist/**
+.vscode/**
+src-tauri/target/**
+src-tauri/gen/schemas/**

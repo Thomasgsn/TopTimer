@@ -1,0 +1,21 @@
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

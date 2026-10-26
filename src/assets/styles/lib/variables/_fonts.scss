@@ -1,0 +1,21 @@
+// TopTimer only uses the macOS system fonts: nothing is bundled or downloaded.
+
+$font-name-system: -apple-system, blinkmacsystemfont, "SF Pro Text", "Helvetica Neue", arial;
+$font-family-system: $font-name-system, sans-serif;
+$font-name-mono: ui-monospace, sfmono-regular, menlo, monaco, consolas, monospace;
+$font-family-mono: $font-name-mono, sans-serif;
+$font-size-2xs: 0.5rem; // 8px
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-md: 1.125rem; // 18px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.5rem; // 24px
+$font-size-2xl: 1.875rem; // 30px
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-line-height-icon: 1;
+$font-line-height-default: 1.5;

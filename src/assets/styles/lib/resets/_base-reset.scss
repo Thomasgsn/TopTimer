@@ -1,0 +1,45 @@
+@use "../variables/colors" as color;
+@use "../variables/fonts" as font;
+
+::selection {
+  color: inherit;
+  background-color: rgba(color.$color-primary, 0.25);
+  text-shadow: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-size: font.$font-size-base;
+  font-weight: font.$font-weight-medium;
+  line-height: font.$font-line-height-default;
+  background-color: transparent;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: 0ms;
+    transition-delay: 0ms;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
