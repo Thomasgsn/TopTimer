@@ -6,7 +6,7 @@ import { readonly, ref } from "vue";
 
 /** Window size while the settings are shown; the widget itself is 200 × 100. */
 export const SETTINGS_WIDTH = 380;
-export const SETTINGS_HEIGHT = 420;
+export const SETTINGS_HEIGHT = 460;
 
 interface WindowFrame {
   size: PhysicalSize;

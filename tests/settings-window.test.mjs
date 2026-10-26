@@ -67,7 +67,7 @@ test("the settings enlarge the widget, then give it back its frame", async () =>
   await mode.expand();
   assert.equal(mode.expanded.value, true);
   assert.equal(mode.busy.value, false);
-  assert.deepEqual(state.size, { width: 760, height: 840 });
+  assert.deepEqual(state.size, { width: 760, height: 920 });
   assert.deepEqual(state.position, original.position);
 
   await mode.collapse();
@@ -80,7 +80,7 @@ test("a widget in the bottom-right corner moves so the settings fit on screen", 
   const mode = useSettingsWindow();
 
   await mode.expand();
-  assert.deepEqual(state.position, { x: 2880 - 760, y: 50 + 1700 - 840 });
+  assert.deepEqual(state.position, { x: 2880 - 760, y: 50 + 1700 - 920 });
 
   await mode.collapse();
   assert.deepEqual(state, original);
@@ -114,10 +114,10 @@ test("a failed enlargement restores the widget", async (context) => {
 
 test("fitting keeps a window that already fits where it is", () => {
   assert.deepEqual(
-    fitInArea({ x: 100, y: 100 }, { width: 760, height: 840 }, screen),
+    fitInArea({ x: 100, y: 100 }, { width: 760, height: 920 }, screen),
     { x: 100, y: 100 },
   );
-  assert.deepEqual(fitInArea({ x: -50, y: 0 }, { width: 760, height: 840 }, screen), {
+  assert.deepEqual(fitInArea({ x: -50, y: 0 }, { width: 760, height: 920 }, screen), {
     x: 0,
     y: 50,
   });
