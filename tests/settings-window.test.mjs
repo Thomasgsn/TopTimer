@@ -113,10 +113,10 @@ test("a failed enlargement restores the widget", async (context) => {
 });
 
 test("fitting keeps a window that already fits where it is", () => {
-  assert.deepEqual(
-    fitInArea({ x: 100, y: 100 }, { width: 760, height: 920 }, screen),
-    { x: 100, y: 100 },
-  );
+  assert.deepEqual(fitInArea({ x: 100, y: 100 }, { width: 760, height: 920 }, screen), {
+    x: 100,
+    y: 100,
+  });
   assert.deepEqual(fitInArea({ x: -50, y: 0 }, { width: 760, height: 920 }, screen), {
     x: 0,
     y: 50,
