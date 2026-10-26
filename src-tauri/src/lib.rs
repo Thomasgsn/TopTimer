@@ -225,6 +225,15 @@ pub fn run() {
             app.handle()
                 .set_activation_policy(tauri::ActivationPolicy::Accessory)?;
 
+            // The autostart plugin writes its LaunchAgent without creating the
+            // folder, which a new macOS account does not have yet.
+            #[cfg(target_os = "macos")]
+            if let Err(error) =
+                std::fs::create_dir_all(app.path().home_dir()?.join("Library/LaunchAgents"))
+            {
+                eprintln!("TopTimer could not prepare launch at login: {error}");
+            }
+
             let tray_state = TrayState {
                 locale: "en".to_string(),
                 running: false,
