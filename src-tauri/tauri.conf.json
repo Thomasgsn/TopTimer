@@ -5,7 +5,7 @@
   "identifier": "com.ths.toptimer",
   "build": {
     "beforeDevCommand": "npm run dev",
-    "devUrl": "http://localhost:1420",
+    "devUrl": "http://localhost:1430",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
   },
@@ -48,7 +48,7 @@
         "style-src": "'self' 'unsafe-inline'",
         "img-src": "'self' data: blob:",
         "font-src": "'self' data:",
-        "connect-src": "ipc: http://ipc.localhost ws://localhost:1420 ws://localhost:1421",
+        "connect-src": "ipc: http://ipc.localhost ws://localhost:1430 ws://localhost:1431",
         "object-src": "'none'",
         "base-uri": "'self'",
         "form-action": "'none'",
