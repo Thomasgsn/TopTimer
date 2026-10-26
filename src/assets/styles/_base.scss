@@ -1,0 +1,78 @@
+:root {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  color: #383837;
+  background: transparent;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --list: #fafaf9;
+  --paper: #fff;
+  --text: #383837;
+  --muted: #868684;
+  --line: #e3e3e1;
+  --accent: #c96864;
+  --accent-soft: #f4eceb;
+  --hover: #f2f2f0;
+  --saved: #5f8063;
+
+  // The widget floats over other windows: translucent at rest, nearly opaque on hover.
+  --widget: rgb(255 255 255 / 62%);
+  --widget-hover: rgb(255 255 255 / 90%);
+  --widget-border: rgb(20 22 24 / 11%);
+}
+
+.load-error {
+  height: 100%;
+  padding: 10px 12px;
+  overflow: auto;
+  border-radius: 14px;
+  color: var(--text);
+  background: var(--paper);
+
+  &__title {
+    margin: 0 0 4px;
+    font-size: 12px;
+  }
+
+  &__help {
+    margin: 0 0 6px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  &__details {
+    margin: 0;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    color: var(--muted);
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --list: #2d2f30;
+    --paper: #242526;
+    --text: #f2f2ef;
+    --muted: #a7a7a3;
+    --line: #3b3d3e;
+    --accent-soft: rgb(201 104 100 / 14%);
+    --hover: #363839;
+    --widget: rgb(36 37 38 / 62%);
+    --widget-hover: rgb(36 37 38 / 92%);
+    --widget-border: rgb(255 255 255 / 10%);
+  }
+}

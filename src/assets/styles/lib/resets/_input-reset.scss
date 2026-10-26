@@ -1,0 +1,96 @@
+@use "../variables/colors" as color;
+
+a,
+button,
+summary {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  outline-color: color.$color-primary;
+
+  &:focus-visible {
+    outline-width: 2px;
+    outline-offset: 2px;
+  }
+}
+
+select {
+  cursor: pointer;
+}
+
+input:not([type="checkbox"]),
+select,
+textarea {
+  appearance: none;
+  position: relative;
+  box-sizing: border-box;
+  accent-color: color.$color-primary;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: rgba(color.$color-primary, 0.5);
+  }
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="url"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="range"],
+textarea,
+select {
+  font-family: inherit;
+  overflow: visible;
+  outline: none;
+
+  &:is(input:not([type="range"]), textarea) {
+    cursor: text;
+  }
+}
+
+input[type="range"] {
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: calc(50%);
+    transform: translate(-50%);
+    left: 50%;
+    width: 90%;
+    height: 1px;
+    background-color: rgba(color.$color-primary, 0.1);
+    border-radius: 0.375rem;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"],
+label:has(input[type="checkbox"]),
+label:has(input[type="radio"]) {
+  cursor: pointer;
+  accent-color: color.$color-primary;
+}
+
+textarea {
+  field-sizing: content;
+  resize: vertical;
+}
